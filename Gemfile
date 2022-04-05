@@ -25,6 +25,22 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'dotenv-rails', '>= 2.7.6'
+gem 'devise', '~> 4.8'
+gem 'devise-i18n', '~> 1.10'
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
+gem 'nokogiri', '~> 1.12', '>= 1.12.5'
+gem 'ransack', '~> 2.5'
+gem 'aasm', '~> 5.2'
+gem 'pundit', '~> 2.1', '>= 2.1.1'
+gem 'omniauth-twitter', '~> 1.4'
+gem 'omniauth-google-oauth2', '~> 1.0'
+gem 'omniauth-github', '~> 2.0'
+gem 'omniauth-rails_csrf_protection', '~> 1.0', '>= 1.0.1'
+gem 'omniauth', '~> 2.0', '>= 2.0.4'
+gem 'after_commit_everywhere', '~> 1.0'
+
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
