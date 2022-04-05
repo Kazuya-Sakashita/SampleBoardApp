@@ -57,6 +57,10 @@ class BoardsController < ApplicationController
     end
   end
 
+  def bookmarks
+    @bookmark_boards = current_user.bookmarks_boards.includes(:user).order(created_at: :desc)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_board
