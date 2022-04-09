@@ -27,5 +27,9 @@ Things you may want to cover:
 <参考HP>
 https://miiina01220.hatenablog.com/entry/2020/11/20/172739
 
+https://study-diary.hatenadiary.jp/entry/2020/08/11/212607
+
+https://qiita.com/oden-09/items/39473d8f510cf70a52e8
+
 
 参考にブックマーク機能を学ぶ

@@ -1,0 +1,7 @@
+<% if current_user.own?(board) %>
+  <div class='mr10 float-right'>
+    <%= render 'crud_menus', { board: board } %>
+<% else %>
+  <%= render 'bookmarks/bookmark_area', { board: board } %>
+  </div>
+<% end %>
