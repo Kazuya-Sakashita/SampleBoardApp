@@ -1,9 +1,10 @@
 class BoardsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_board, only: %i[ show edit update destroy ]
 
   # GET /boards or /boards.json
   def index
-    @boards = Board.all
+    @boards = Board.all.includes(:user).order(created_at: :desc)
   end
 
   # GET /boards/1 or /boards/1.json
@@ -22,7 +23,7 @@ class BoardsController < ApplicationController
   # POST /boards or /boards.json
   def create
     @board = Board.new(board_params)
-
+    @board.user_id = current_user.id
     respond_to do |format|
       if @board.save
         format.html { redirect_to board_url(@board), notice: "Board was successfully created." }
@@ -69,6 +70,6 @@ class BoardsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def board_params
-      params.require(:board).permit(:title, :content)
+      params.require(:board).permit(:title, :content, :user_id)
     end
 end
